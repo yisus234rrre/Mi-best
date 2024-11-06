@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Mejor Amiga</title>
+    <style>
+        /* Fondo de corazones flotando */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #ffcccc;
+            color: #333;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Texto principal */
+        h1 {
+            font-size: 2em;
+            color: #555;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Corazón SVG animado */
+        .heart {
+            width: 150px;
+            height: 150px;
+            margin: 20px 0;
+            animation: heartbeat 1s infinite;
+        }
+        .heart svg {
+            fill: #ff3366;
+        }
+
+        /* Animación de latido */
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Efecto de aparición suave */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Footer para el mensaje "De parte de tu best" */
+        .footer {
+            font-size: 1.2em;
+            color: #555;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Corazones flotando en el fondo */
+        .heart-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .heart-bg div {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 20px;
+            height: 20px;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: floatUp 5s infinite ease-in-out;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Corazones flotando -->
+    <div class="heart-bg">
+        <div style="left: 10%; animation-delay: 0s;"></div>
+        <div style="left: 30%; animation-delay: 2s;"></div>
+        <div style="left: 50%; animation-delay: 4s;"></div>
+        <div style="left: 70%; animation-delay: 1s;"></div>
+        <div style="left: 90%; animation-delay: 3s;"></div>
+    </div>
+
+    <!-- Mensaje principal -->
+    <h1>Te quiero mucho y eres mi princesa hermosa</h1>
+
+    <!-- Corazón animado SVG -->
+    <div class="heart">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+    </div>
+
+    <!-- Footer con dedicatoria -->
+    <div class="footer">De parte de tu best 💖</div>
+</body>
+</html>
